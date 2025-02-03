@@ -24,7 +24,12 @@ puts sorted_list
 
 # Lastly, display each item in the list prepended with "buy ".
 
-
+puts "buy #{sorted_list[0]}" # buy mil
+puts "buy #{sorted_list[1]}" # buy eggs
+puts "buy #{sorted_list[2]}" # buy bacon
+puts "buy #{sorted_list[3]}" # buy beer
+puts "buy #{sorted_list[4]}" # buy cookies
+puts "buy #{sorted_list[5]}" # buy apples
 
 # HINTS
 # Learn to read the documentation!

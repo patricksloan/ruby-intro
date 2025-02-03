@@ -3,25 +3,37 @@
 # ruby 4-hashes.rb
 
 # Hashes are lists of *key-value pairs*
-patrick = {"name" => "Patrick", "location" => "Evanston", "school" => "Kellogg"}
 
-puts patrick
+ user = {
+    "name" => "Patrick",
+    "location" => { "city" => "Chicago", "state" => "IL"},
+    "status" => "coding"
+}
 
 # Accessing data from the hash
 
-location = patrick["location"]
-puts location
+name = user["name"]
+puts name
+
+city = user["location"]["city"]
+puts city
+
+user["status"] = "more code"
+puts user
+
+user["location"]["city"] = "Evanston"
+puts user
 
 # More Complex Hashes
 
-my_profile = {
-    "name" => "Patrick",
-    "location" => {"city" => "Evanston", "state" => "Illinois"},
-    "school" => "Kellogg"
+user = {
+  "name" => { "first" => "Patrick", "last" => "Sloan" },
+  "location" => { "city" => "Chicago", "state" => "IL" },
+  "timeline" => [{ "status" => "Brrr!", "posted_at" => "9:00am" },
+                 { "status" => "Coding.", "posted_at" => "10:00am" },
+                 { "status" => "Lunch time.", "posted_at" => "12:00pm" }]
 }
 
-puts my_profile
-puts my_profile["location"], ["city"]
-
-my_profile["name"] = "Patrick Sloan"
-puts my_profile
+first_name = user["name"]["first"]
+first_status = user["timeline"][0]["status"]
+puts "#{first_name}'s first post was #{first_status}"
